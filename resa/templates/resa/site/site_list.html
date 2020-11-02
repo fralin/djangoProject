@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Nos sites de plongée{% endblock %}
+
+{% block content %}
+    <h2>Liste des sites</h2>
+    <table class="table table-hover">
+        <thead class="thead-dark">
+        <tr>
+            <th>Nom</th>
+            <th>Description</th>
+            <th>Profondeur max</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for site in sites %}
+                <tr>
+                    <td><a href="{{ site.get_absolute_url }}">{{ site.name }}</a></td>
+                    <td>{{ site.description }}</td>
+                    <td>{{ site.depth }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock content %}

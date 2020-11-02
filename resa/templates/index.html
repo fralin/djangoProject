@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+
+{% endblock header %}
+
+
+{% block content %}
+<!-- Contenu de la page -->
+
+<div class=container-fluid>
+    <div class="row align-items-center my-5">
+        <div class="col-lg-7">
+            <img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'imgs/img2.jpeg' %}" width="900px" height="400px" alt="">
+        </div>
+        <!-- /.col--lg-8 -->
+        <div class="col-lg-5">
+            <h1 class="font-weight-light">Bienvenu sur le site du Lion de Mer</h1>
+            <p>Le club du Lion de Mer est un club associatif. Pour pouvoir accéder à ses activités,
+                il faut être membre de l'association à jour de sa cotisation, et membre de la FFESSM. </p>
+            <a class="btn btn-primary" href="{% url 'resa:login' %}">Accès Membre</a>
+        </div>
+        <!--  /.col-md-4 -->
+    </div>
+    <!-- /.row -->
+
+    <div class="card text-white bg-secondary my-5 py-4 text-center">
+      <div class="card-body">
+        <p class="text-white m-0">Placer ici des informations importants (AG, changment de date de sortie,
+            sortie exceptionelle, etc ...)</p>
+      </div>
+    </div>
+</div>
+
+    <!--Détails -->
+    <div class="row">
+    <div class="col-md-6 mb-5">
+        <div class="card h-100">
+            <div class="card-body">
+                <h3 class="card-title">Nos prochaines explorations</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn btn-primary btn-sm">Plus de dates</a>
+          </div>
+        </div>
+
+    </div>
+    <div class="col-md-6 mb-5">
+        <div class="card h-100">
+            <div class="card-body">
+                <h3 class="card-title">Stages et Formations</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn btn-primary btn-sm">Plus de dates</a>
+          </div>
+        </div>
+
+    </div>
+    </div>
+{% endblock content %}

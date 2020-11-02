@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table class="table table-hover">
+        <thead class="thead-dark">
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Niveau</th>
+        </thead>
+    <tbody>
+        {% for diver in divers %}
+            <tr>
+                <td>{{ diver.last_name }}</td>
+                <td>{{ diver.first_name }}</td>
+                <td>{{ diver.level }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+
+
+
+
+{% endblock content %}
